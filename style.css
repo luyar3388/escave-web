@@ -1,6 +1,5 @@
 body{
     margin: 0;
-    
 }
 li{
     list-style: none;
@@ -24,7 +23,6 @@ header{
     position: fixed;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 3;
 }
 .icon_list{
     display: flex;
@@ -50,57 +48,63 @@ main{
     flex-direction: column;
 }
 .video{
-    margin-right: 0;
-    position: relative;
-    width: 100%; 
-    opacity: 0.8;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -2;
 }
-.player{
+.content{
+    height: 100vh;
     width: 100%;
 }
-.main_content{
+.content_wrap{
     display:flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:110px;
-    left:25%;
-}
-.content{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 50px;
 }
-#content_text1{
+#content_text{
     color:red;
     font-size: 10rem;
     font-weight: bold;
 }
-#content_text2{
-    color:red;
-    font-size: 2rem;
-}
-
 .side_menu{
     display: flex;
-    background-color:red;
     justify-content: center;
     align-items: center;
-    background-color: black;
-    
     height: 100%;
     position: fixed;
     right:0;
     top:86px;
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-.side_menu ul{
-    width:100%;
+@media screen and (max-width: 1200px) {
+    .side_menu {
+      display: none;
+    }
     
-}
+  }
+@media screen and (max-width: 870px) {
+    #youtube {
+      width:500px;
+      height:300px;
+    }
+    #content_text{
+        font-size: 7rem;
+    }
+    .content{
+        margin-top: 100px;
+    }
+  }
+@media screen and (max-width: 580px) {
+    #youtube {
+      width:450px;
+      height:300px;
+    }
+    #content_text{
+        font-size: 6rem;
+    }
+  }
 .side_menu li {
     padding:40px 15px;
     border-right: 4px solid gray;
